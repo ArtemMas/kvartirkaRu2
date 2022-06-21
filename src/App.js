@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, Routes} from 'react-router-dom';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import MainPage from "./components/MainPage/MainPage";
+import Flats from "./components/Flats/Flats";
+import Houses from "./components/Houses/Houses";
 
-function App() {
+function KvartirkaApp(props) {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <div className='app-wrapper'>
+              <Header/>
+              <div className='app-wrapper-content'>
+                  <Routes>
+                      <Route path='/'
+                             element={<MainPage state={props.state}/>}/>
+                      <Route path='/mainpage'
+                             element={<MainPage state={props.state}/>}/>
+                      <Route path='/flats'
+                             element={<Flats state={props.state}/>}/>
+                      <Route path='/houses'
+                             element={<Houses state={props.state}/>}/>
+                  </Routes>
+                  {/*<Houses/>*/}
+              </div>
+              <Footer/>
+          </div>
   );
 }
 
-export default App;
+export default KvartirkaApp;

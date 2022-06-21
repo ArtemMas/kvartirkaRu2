@@ -1,0 +1,9 @@
+.filters {
+	grid-area: filters;
+   	/*background: #2a3144;*/
+	margin-top: 17px;
+}
+
+.button {
+	border-radius: 10px 10px 10px 10px;
+}

@@ -1,0 +1,15 @@
+.signUp {
+	grid-area: signUp;
+	margin-top: 17px;
+
+	justify-content: start;
+}
+
+.sign {
+	border-radius: 10px 10px 10px 10px;
+}
+
+/*.nav {
+	text-decoration: none;
+	color: #ffffff;
+}*/

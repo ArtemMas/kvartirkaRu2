@@ -1,0 +1,49 @@
+.obj {
+    padding: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+}
+
+.column {
+    margin: 10px 0 10px 0;
+}
+
+
+
+
+
+/*css for ModalWindow*/
+
+.location {
+    position: relative;
+    overflow: hidden;
+}
+
+.loc1, .loc2, .loc3 {
+    color:#eee;
+    font-size:12px;
+    position:absolute;
+}
+
+.loc1 {
+    top:0;
+}
+
+.loc2 {
+    top:14px;
+}
+
+.loc3 {
+    top:28px;
+}
+
+.loc4 {
+    position: relative;
+}
+
+.contacts {
+    align-content: start;
+}
+
+.a {
+    color: black;
+}

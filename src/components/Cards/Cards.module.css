@@ -1,0 +1,21 @@
+.cards {
+    margin: 50px 0 150px 0;
+}
+
+.fSpan {
+    display: flex;
+
+    justify-content: space-around;
+
+}
+
+.sSpan {
+    display: flex;
+
+    justify-content: space-around;
+
+}
+
+.space{
+    margin: 50px 0 50px 0;
+}

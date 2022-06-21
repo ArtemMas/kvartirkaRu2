@@ -1,0 +1,22 @@
+.main {
+    background: rgba(33,37,41);
+}
+
+.group {
+    padding: 0;
+    list-style-type: none;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: burlywood;
+}
+
+li {
+    margin-bottom: 15px;
+}

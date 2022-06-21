@@ -1,0 +1,9 @@
+.sBtn {
+	grid-area: sBtn;
+    /*background: #2a3144; */
+	margin-top: 17px;
+}
+
+.btn {
+	border-radius: 10px 10px 10px 10px;
+}

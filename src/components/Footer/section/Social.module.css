@@ -1,0 +1,19 @@
+.main {
+    grid-area: soc;
+    padding-left: 120px;
+}
+
+.h1 {
+    color: white;
+    font-style: italic;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+
+span {
+    color: white;
+}

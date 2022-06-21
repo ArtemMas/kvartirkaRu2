@@ -1,0 +1,9 @@
+.divImStyle {
+   grid-area: img;
+
+   text-align: center;
+}
+
+.ima {
+   width: 50px;
+}

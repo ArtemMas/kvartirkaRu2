@@ -1,0 +1,14 @@
+.logIn {
+	grid-area: logIn;
+	margin-top: 17px;
+}
+
+.log {
+	border-radius: 10px 10px 10px 10px;
+}
+
+
+/*.nav {
+	text-decoration: none;
+	color: #ffffff;
+}*/

@@ -1,0 +1,44 @@
+.net {
+   margin: 13px;
+   text-decoration: none;
+   font-size: 18pt;
+
+   padding-top: 0.3125rem;
+   padding-bottom: 0.3125rem;
+   color: white;
+   position: relative;
+   white-space: nowrap;
+   cursor: pointer;
+}
+
+.net:after {
+   content: "";
+   display: block;
+   position: absolute;
+   right: 0;
+   bottom: -3px;
+   width: 0;
+   height: 2px; /* Высота линии */
+   background-color: white; /* Цвет подчеркивания при исчезании линии*/
+   transition: width 0.5s; /* Время эффекта */
+}
+
+.net:hover:after {
+   content: "";
+   width: 100%;
+   display: block;
+   position: absolute;
+   left: 0;
+   bottom: -3px;
+   height: 2px; /* Высота линии */
+   background-color: red; /* Цвет подчеркивания при появлении линии*/
+   transition: width 0.5s;  /* Время эффекта */
+}
+
+.ar {
+   color: rgb(166, 99, 200);
+}
+
+.nw {
+   color: #ffffff;
+}

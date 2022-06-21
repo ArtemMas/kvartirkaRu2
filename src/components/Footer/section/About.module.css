@@ -1,0 +1,10 @@
+.main {
+    grid-area: about;
+
+    display: flex;
+}
+
+.h1 {
+    color: white;
+    font-weight: normal;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import Cards from "../Cards/Cards";
-import main from './Houses.module.css'
+import main from './BedPlace.module.css'
 
-const Houses = (props) => {
+const BedPlace = (props) => {
 
     let typeOfObject = {}
 
@@ -22,4 +22,4 @@ const Houses = (props) => {
     )
 }
 
-export default Houses
+export default BedPlace

@@ -1,11 +1,12 @@
-import React, {useRef} from "react";
+import React from "react";
 import Cards from "../Cards/Cards";
 import main from './MainPage.module.css'
-import {Button, Dropdown, DropdownButton, ListGroup} from "react-bootstrap";
+import {Button, ListGroup} from "react-bootstrap";
 import FiltersTab from "./FiltersTab/FiltersTab";
+import CardsContainer from "../Cards/CardsContainer";
 
 const MainPage = (props) => {
-
+    debugger
     let truePath = () => {
         window.location.assign('http://localhost:3000/')
     }
@@ -29,7 +30,7 @@ const MainPage = (props) => {
                 </div>
             </div>
             <h1 className={main.title}>Лучшие предложения</h1>
-            <Cards object={props.state.best}/>
+            <Cards typeOfObj={props.state}/>
         </div>
     )
 }

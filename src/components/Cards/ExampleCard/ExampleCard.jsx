@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Button, Card, Col, Modal} from "react-bootstrap";
+import {Button, Card, Col} from "react-bootstrap";
 import ec from './ExampleCard.module.css'
 import ModalWindow from "./ModalWindow";
 

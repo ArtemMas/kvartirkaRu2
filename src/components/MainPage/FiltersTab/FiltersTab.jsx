@@ -1,4 +1,4 @@
-import React, {useImperativeHandle} from "react";
+import React from "react";
 import {Button, Dropdown, Form, ListGroup} from "react-bootstrap";
 import main from "../MainPage.module.css";
 
@@ -29,7 +29,7 @@ const FiltersTab = (props) => {
         window.location.assign('http://localhost:3000/' + truePath)
     }
 
-    debugger
+
     return (
         <Dropdown>
             <Dropdown.Toggle variant="light" id="dropdown-basic">

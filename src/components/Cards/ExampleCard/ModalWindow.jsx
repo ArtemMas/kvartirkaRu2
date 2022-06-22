@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Carousel, Modal, Offcanvas} from "react-bootstrap";
+import {Button, Modal} from "react-bootstrap";
 import mod from './ExampleCard.module.css'
 import ExampleCarousel from "./elements/ExampleCarousel";
 

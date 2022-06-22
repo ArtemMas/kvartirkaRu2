@@ -1,8 +1,23 @@
 .page {
-    background-color: #f5f5dc;
+    background: #f5f5dc;
 }
 
 .title {
     text-align: center;
     margin-top: 100px;
 }
+
+.firstTable {
+    background-image: url('../../assets/images/rajon1.jpg');
+    width: 100%;
+    height: 628px;
+}
+
+.list{
+    padding-top: 200px;
+}
+
+.searchBtn{
+    width: 100px;
+}
+

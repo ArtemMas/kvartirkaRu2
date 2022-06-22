@@ -25,7 +25,7 @@ const Header = () => {
                     >
                         <Login/>
                         <SignUp/>
-                        <Filters/>
+                        {/*<Filters/>*/}
                     </Nav>
                     <Form className="d-flex">
                         <Search/>

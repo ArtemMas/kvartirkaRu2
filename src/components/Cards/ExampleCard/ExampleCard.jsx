@@ -8,7 +8,7 @@ const ExampleCard = (props) => {
     const [modalShow, setModalShow] = useState(false);
 
     return (
-        <div>
+        <div className={ec.card}>
             <Col className={ec.column}>
                 <Card style={{ width: '18rem' }} className={ec.obj}>
                     <Card.Img variant="top" src={props.img} />

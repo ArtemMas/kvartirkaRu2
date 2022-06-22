@@ -5,14 +5,21 @@ import './index.css';
 import KvartirkaApp from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import state from "./Redux/store";
+import store from "./Redux/store";
 
-ReactDOM.render(
+let rerenderEntireTree = (state) => {
+    ReactDOM.render(
 
-    <BrowserRouter>
-        <KvartirkaApp state={state}/>
-    </BrowserRouter>
-    , document.getElementById('root'))
+        <BrowserRouter>
+            <KvartirkaApp state={state} dispatch={store.dispatch.bind(store)}/>
+        </BrowserRouter>
+        , document.getElementById('root'))
+}
+
+rerenderEntireTree(store.getState())
+
+store.subscribe(rerenderEntireTree)
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

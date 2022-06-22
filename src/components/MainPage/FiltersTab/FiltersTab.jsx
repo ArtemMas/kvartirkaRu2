@@ -4,30 +4,24 @@ import main from "../MainPage.module.css";
 
 const FiltersTab = (props) => {
 
-
-    let truePath = ''
-
-    let flatChange = () => {truePath = 'flats/' + props.pathName}
-    let roomChange = () => {truePath = 'room/' + props.pathName}
+    debugger
+    let typeOfAction = ''
+    let flatChange = () => { props.dispatch({ type: 'FLATS', pathName: props.pathName})}
+    let roomChange = () => { props.dispatch({ type: 'ROOMS', pathName: props.pathName})}
     let bedPlaceOrSiteChange = () => {
+        debugger
         if (props.labelName === 'Участок') {
-            truePath = 'site/' + props.pathName
+            typeOfAction = 'SITE'
         }
         else if (props.labelName === 'Койко-место') {
-            truePath = 'bed-place/' + props.pathName
+            typeOfAction = 'BED-PLACE'
         }
-        //
-        //
-        // props.labelName = 'Участок'
-        // ? truePath = 'site/' + props.pathName
-        // : truePath = 'bed-place/' + props.pathName
-    }
-    let houseChange = () => {truePath = 'houses/' + props.pathName}
+        props.dispatch({ type: typeOfAction, pathName: props.pathName})}
+    let houseChange = () => { props.dispatch({ type: 'HOUSES', pathName: props.pathName})}
+
+        // , (e) => setChecked(e.currentTarget.checked)
 
 
-    let searchPath = () => {
-        window.location.assign('http://localhost:3000/' + truePath)
-    }
 
 
     return (
@@ -48,7 +42,8 @@ const FiltersTab = (props) => {
                         <Form.Check onChange={houseChange} type="checkbox" name='group1' id='default-checkbox-4' label="Дом, дача"/>
                     </ListGroup.Item>
                 </ListGroup>
-                <Button variant="primary" className={main.searchBtn} onClick={searchPath}>Найти</Button>
+                {/*<Button variant="primary" className={main.searchBtn}*/}
+                {/*        onClick={searchPath}>Найти</Button>*/}
             </Dropdown.Menu>
         </Dropdown>
     )

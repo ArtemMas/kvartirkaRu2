@@ -20,7 +20,7 @@ const SignUp = (props) => {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form>
+                    <Form onSubmit={() => alert('лох')}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Адрес электронной почты</Form.Label>
                             <Form.Control

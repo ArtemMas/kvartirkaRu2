@@ -21,20 +21,22 @@ function KvartirkaApp(props) {
               <div className='app-wrapper-content'>
                   <Routes>
                       <Route path='/'
-                             element={<MainPage state={props.state.best.ads}/>}/>
+                             element={<MainPage dispatch={props.dispatch} truePath={props.state.truePath}
+                                                ads={props.state.best.ads}/>}/>
                       <Route path='/mainpage'
-                             element={<MainPage state={props.state.best.ads}/>}/>
+                             element={<MainPage dispatch={props.dispatch} truePath={props.state.truePath}
+                                                ads={props.state.best.ads}/>}/>
                       <Route path='/flats/daily'
                              element={<Flats daily={props.state.flats.daily}/>}/>
                       <Route path='/flats/long-term'
                              element={<Flats longTerm={props.state.flats.longTerm}/>}/>
                       <Route path='/flats/buy'
                              element={<Flats buy={props.state.flats.buy}/>}/>
-                      <Route path='/room/daily'
+                      <Route path='/rooms/daily'
                              element={<Room daily={props.state.room.daily}/>}/>
-                      <Route path='/room/long-term'
+                      <Route path='/rooms/long-term'
                              element={<Room longTerm={props.state.room.longTerm}/>}/>
-                      <Route path='/room/buy'
+                      <Route path='/rooms/buy'
                              element={<Room buy={props.state.room.buy}/>}/>
                       <Route path='/bed-place/daily'
                              element={<BedPlace daily={props.state.bedPlace.daily}/>}/>

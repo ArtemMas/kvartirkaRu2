@@ -1,3 +1,10 @@
+const FLATS = 'FLATS'
+const ROOMS = 'ROOMS'
+const SITE = 'SITE'
+const BED_PLACE = 'BED-PLACE'
+const HOUSES = 'HOUSES'
+const SEARCH_PATH = 'SEARCH-PATH'
+
 let store = {
     _state: {
         flats: {
@@ -250,7 +257,13 @@ let store = {
                     price: '18 000 ₽/сут', variant: 'daily'}
             ],
         },
+        flatsCheck: 'false',
+        roomsCheck: 'false',
+        siteCheck: 'false',
+        bedPlaceCheck: 'false',
+        housesCheck: 'false',
         truePath: '',
+        lastObj: '',
     },
     getState() {
       return this._state
@@ -264,18 +277,73 @@ let store = {
 
     dispatch (action) {
         debugger
-        if (action.type === 'FLATS') {
-            this._state.truePath = 'flats/' + action.pathName
-        } else if(action.type === 'ROOMS') {
-            this._state.truePath = 'rooms/' + action.pathName
-        } else if(action.type === 'BED-PLACE') {
-            this._state.truePath = 'bed-place/' + action.pathName
-        } else if(action.type === 'SITE') {
-            this._state.truePath = 'site/' + action.pathName
-        } else if(action.type === 'HOUSES') {
-            this._state.truePath = 'houses/' + action.pathName
-        } else if (action.type === 'SEARCH-PATH') {
-            window.location.assign('http://localhost:3000/' + this._state.truePath)
+        if (action.type === FLATS) {
+            this._state.truePath = ''
+            this._state.lastObj = ''
+            if (this._state.flatsCheck === 'true') {
+                this._state.flatsCheck = 'false'
+            } else if (this._state.flatsCheck === 'false'){
+                this._state.flatsCheck = 'true'
+                this._state.lastObj = 'flats/'
+                this._state.truePath = action.pathName
+            }
+        } else if(action.type === ROOMS) {
+            this._state.truePath = ''
+            this._state.lastObj = ''
+            if (this._state.roomsCheck === 'true') {
+                this._state.roomsCheck = 'false'
+            } else if (this._state.roomsCheck === 'false'){
+                this._state.roomsCheck = 'true'
+                this._state.lastObj = 'rooms/'
+                this._state.truePath = action.pathName
+            }
+        } else if(action.type === SITE) {
+            this._state.truePath = ''
+            this._state.lastObj = ''
+            if (this._state.siteCheck === 'true') {
+                this._state.siteCheck = 'false'
+            } else if (this._state.siteCheck === 'false'){
+                this._state.siteCheck = 'true'
+                this._state.lastObj = 'site/'
+                this._state.truePath = action.pathName
+            }
+        } else if(action.type === BED_PLACE) {
+            this._state.truePath = ''
+            this._state.lastObj = ''
+            if (this._state.bedPlaceCheck === 'true') {
+                this._state.bedPlaceCheck = 'false'
+            } else if (this._state.bedPlaceCheck === 'false'){
+                this._state.bedPlaceCheck = 'true'
+                this._state.lastObj = 'bed-place/'
+                this._state.truePath = action.pathName
+            }
+        } else if(action.type === HOUSES) {
+            this._state.truePath = ''
+            this._state.lastObj = ''
+            if (this._state.housesCheck === 'true') {
+                this._state.housesCheck = 'false'
+            } else if (this._state.housesCheck === 'false'){
+                this._state.housesCheck = 'true'
+                this._state.lastObj = 'houses/'
+                this._state.truePath = action.pathName
+            }
+        } else if (action.type === SEARCH_PATH) {
+            if (this._state.flatsCheck === 'true') {
+                window.location.assign('http://localhost:3000/'
+                    + this._state.lastObj + this._state.truePath)
+            } else if (this._state.roomsCheck === 'true') {
+                window.location.assign('http://localhost:3000/'
+                    + this._state.lastObj + this._state.truePath)
+            } else if (this._state.siteCheck === 'true') {
+                window.location.assign('http://localhost:3000/'
+                    + this._state.lastObj + this._state.truePath)
+            } else if (this._state.bedPlaceCheck === 'true') {
+                window.location.assign('http://localhost:3000/'
+                    + this._state.lastObj + this._state.truePath)
+            } else if (this._state.housesCheck === 'true') {
+                window.location.assign('http://localhost:3000/'
+                    + this._state.lastObj + this._state.truePath)
+            } else {window.location.assign('http://localhost:3000/')}
         }
     },
 }

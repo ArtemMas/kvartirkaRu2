@@ -4,7 +4,7 @@ import main from "../MainPage.module.css";
 
 const FiltersTab = (props) => {
 
-    debugger
+
     let typeOfAction = ''
     let flatChange = () => { props.dispatch({ type: 'FLATS', pathName: props.pathName})}
     let roomChange = () => { props.dispatch({ type: 'ROOMS', pathName: props.pathName})}
@@ -12,8 +12,7 @@ const FiltersTab = (props) => {
         debugger
         if (props.labelName === 'Участок') {
             typeOfAction = 'SITE'
-        }
-        else if (props.labelName === 'Койко-место') {
+        } else if (props.labelName === 'Койко-место') {
             typeOfAction = 'BED-PLACE'
         }
         props.dispatch({ type: typeOfAction, pathName: props.pathName})}
@@ -32,7 +31,7 @@ const FiltersTab = (props) => {
             <Dropdown.Menu>
                 <ListGroup variant='flush'>
                     <ListGroup.Item>
-                        <Form.Check onChange={flatChange} type="checkbox" name='group1' id='default-checkbox-1' label="Квартира"/>
+                        <Form.Check checked={props.flatsCheck} onChange={flatChange} type="checkbox" name='group1' id='default-checkbox-1' label="Квартира"/>
                     </ListGroup.Item>
                     <ListGroup.Item>
                         <Form.Check onChange={roomChange} type="checkbox" name='group1' id='default-checkbox-2' label="Комната"/>

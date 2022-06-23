@@ -17,15 +17,15 @@ const MainPage = (props) => {
                 <div className={main.list}>
                     <ListGroup horizontal className="justify-content-md-center">
                         <ListGroup.Item>
-                            <FiltersTab labelName='Участок' pathName='buy' name='Купить'
+                            <FiltersTab flatsCheck={props.flatsCheck} labelName='Участок' pathName='buy' name='Купить'
                                         truePath={props.truePath} dispatch={props.dispatch}/>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <FiltersTab labelName='Койко-место' pathName='long-term' name='Снять'
+                            <FiltersTab flatsCheck={props.flatsCheck} labelName='Койко-место' pathName='long-term' name='Снять'
                                         truePath={props.truePath} dispatch={props.dispatch}/>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <FiltersTab labelName='Койко-место' pathName='daily' name='Посуточно'
+                            <FiltersTab flatsCheck={props.flatsCheck} labelName='Койко-место' pathName='daily' name='Посуточно'
                                         truePath={props.truePath} dispatch={props.dispatch}/>
                         </ListGroup.Item>
                         <Button variant="primary" className={main.searchBtn} onClick={searchPath}>Найти</Button>

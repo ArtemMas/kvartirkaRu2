@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Route, Routes, withRouter} from 'react-router-dom';
+import {BrowserRouter, Navigate, Route, Routes, withRouter} from 'react-router-dom';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import MainPage from "./components/MainPage/MainPage";
@@ -7,7 +7,6 @@ import Flats from "./components/Flats/Flats";
 import Houses from "./components/Houses/Houses";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
-import state from "./Redux/store";
 import BedPlace from "./components/BedPlace/BedPlace";
 import Room from "./components/Room/Room";
 import Site from "./components/Site/Site";
@@ -21,11 +20,10 @@ function KvartirkaApp(props) {
               <div className='app-wrapper-content'>
                   <Routes>
                       <Route path='/'
-                             element={<MainPage dispatch={props.dispatch} truePath={props.state.truePath}
-                                                ads={props.state.best.ads}/>}/>
+                             element={<Navigate to='/mainpage' replace/>}/>
                       <Route path='/mainpage'
                              element={<MainPage dispatch={props.dispatch} truePath={props.state.truePath}
-                                                ads={props.state.best.ads}/>}/>
+                                                ads={props.state.best.ads}/>} flatsCheck={props.state.flatsCheck}/>
                       <Route path='/flats/daily'
                              element={<Flats daily={props.state.flats.daily}/>}/>
                       <Route path='/flats/long-term'
@@ -51,7 +49,6 @@ function KvartirkaApp(props) {
                       <Route path='/houses/buy'
                              element={<Houses buy={props.state.houses.buy}/>}/>
                   </Routes>
-                  {/*<Houses/>*/}
               </div>
               <Footer/>
           </div>
